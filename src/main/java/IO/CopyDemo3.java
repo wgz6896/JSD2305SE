@@ -1,5 +1,7 @@
 package IO;
 
+import java.io.*;
+
 /**
  * java将流分为两类:
  * 节点流与处理流
@@ -19,7 +21,21 @@ package IO;
  * 缓冲字节流：
  */
 public class CopyDemo3 {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("R-C.jpg");
+        BufferedInputStream bis = new BufferedInputStream(fis);
+        //怎么样的高级流就对应什么样的低级流，进归进，出归处
+        //如果对高级流进行关闭操作，对应的低级流也会一起被关闭
+        FileOutputStream fos = new FileOutputStream("R-C2.jpg");
+        BufferedOutputStream bos = new BufferedOutputStream(fos);
+        int d ;
+        long start = System.currentTimeMillis();
+        while((d = bis.read())!=-1){
+            bos.write(d);
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+        bos.close();
+        bis.close();
     }
 }
