@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 public class PersonDemo1 implements Serializable {//签名接口Serializable，你可序列化
-    private transient String name;
-    private int age;
-    private char gender;
-    private transient String[] otherInfo;
+    private  transient String name;
+    private  int age;
+    private  char gender;
+    private   String[] otherInfo;
 
     public PersonDemo1(String name, int age, char gender, String[] otherInfo) {
         this.name = name;
@@ -25,6 +25,7 @@ public class PersonDemo1 implements Serializable {//签名接口Serializable，�
     }
 
     public int getAge() {
+
         return age;
     }
 

@@ -14,8 +14,8 @@ public class OISdemo {
          */
         FileInputStream fis = new FileInputStream("personDemo1.obj");
         ObjectInputStream ois = new ObjectInputStream(fis);
-        PersonDemo1 personDemo2 = (PersonDemo1) ois.readObject();
-        System.out.println(personDemo2);
+        PersonDemo1 personDemo = (PersonDemo1) ois.readObject();
+        System.out.println(personDemo);
         ois.close();
 
     }
