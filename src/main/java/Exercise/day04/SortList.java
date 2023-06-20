@@ -8,18 +8,18 @@ import java.util.function.Consumer;
 //排序
 public class SortList {
     public static void main(String[] args) {
-        List<Integer>list = new ArrayList<>();
         List<String>list1 = new ArrayList<>();
         list1.add("one");
         list1.add("twod");
         list1.add("ia");
         list1.add("affasf");
         list1.add("s");
-        System.out.println(list);
+        System.out.println(list1);
 //        list1.forEach();
-
-        list1.forEach(System.out::println);
-
+        Collections.sort(list1, ( o1, o2) ->(o1.length()-o2.length()));
+        System.out.println(list1);
+        list1.forEach(s-> System.out.println(s));
+        list1.forEach(System.out::println);//犯蠢
 //        String []arr = list1.toArray(new String[list1.size()]);
 //        Arrays.asList(list1);
 //        Collections.sort(list1,(o1,o2)->(o1.length()-o2.length()));
