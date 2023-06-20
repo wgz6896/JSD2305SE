@@ -13,6 +13,6 @@ package IO;
  */
 public class CopyDemo3 {
     public static void main(String[] args) {
-
+        new
     }
 }
