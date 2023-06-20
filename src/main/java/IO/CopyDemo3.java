@@ -26,9 +26,13 @@ public class CopyDemo3 {
         BufferedInputStream bis = new BufferedInputStream(fis);
         //怎么样的高级流就对应什么样的低级流，进归进，出归处
         //如果对高级流进行关闭操作，对应的低级流也会一起被关闭
+        //缓冲流内部默认是一个8kb的字节数组，该数组可通过重载
         FileOutputStream fos = new FileOutputStream("R-C2.jpg");
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         int d ;
+        /**
+         * 缓冲流会将读写操作系统统一转化为块读写操作，保证效率
+         */
         long start = System.currentTimeMillis();
         while((d = bis.read())!=-1){
             bos.write(d);
