@@ -16,11 +16,11 @@ public class CopyDemo {
          */
         FileInputStream fis  =new FileInputStream("1.jpg");
         FileOutputStream fos = new FileOutputStream("3.jpg");
-        byte[]data = new byte[888];
+        byte[]data = new byte[1024*10];
+        int len ;
         long start = System.currentTimeMillis();
-        int len;
-        while ((len= fis.read())!=-1){
-        fos.write(len);}
+        while ((len = fis.read(data))!=-1){
+        fos.write(data,0,len);}
         long end = System.currentTimeMillis();
         System.out.println(end-start);
         //首先进行一个读数据,但是这样只能一个一个读，效率慢而且需要考虑全部字节，应该思考循环
