@@ -1,9 +1,6 @@
 package homework.day05;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 
 /**
  * 将当前目录下的所有文件都复制一份，复制的文件命名为:原
@@ -17,10 +14,7 @@ import java.io.RandomAccessFile;
  */
 public class Test03 {
     public static void main(String[] args) throws IOException {
-        File file = new File(".");
-        if(file.isDirectory()){
-
-        }
+        FileOutputStream fos = new FileOutputStream("");
     }
 }
 

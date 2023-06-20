@@ -22,7 +22,7 @@ public class OSWDemo {
         OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
         //这里默认使用的系统提供的字符集，所以创建转换流时还要明确字符集，
         // （这样写出的字符都会按照该字符集转换为字节转出）避免跨平台出现的乱码
-        osw.write("ahfuihaf;");
+        osw.write("ahfuihaf\n");
         osw.write("abfi hia");
         System.out.println("ok");
         osw.close();

@@ -3,7 +3,6 @@ package IO;
 import java.io.*;
 
 public class CopyDemo {
-    public static final int NUM = 10;
     public static void main(String[] args) throws IOException {
 
         FileInputStream fis = new FileInputStream("R-C.jpg");
